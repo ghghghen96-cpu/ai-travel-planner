@@ -1,0 +1,15 @@
+node_modules
+dist
+.firebaserc
+start_server.bat
+*.cjs
+tmp*
+.DS_Store
+.env
+.local
+.vercel
+*log*
+project.json
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
