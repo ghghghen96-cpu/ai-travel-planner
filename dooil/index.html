@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOOIL Solution & Engineering | Global Fire Protection</title>
+  <meta name="description"
+    content="두일솔루션은 오일&가스, 정유, 석유화학, 발전소 등 산업 플랜트 분야의 화재 방호 시스템(Fire Protection System)에 특화된 Total Solution 전문 기업입니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+
+      <!-- 로고: "DOOIL" 텍스트가 세 박스 전체에 걸쳐 중앙 정렬 -->
+      <a href="#" class="site-logo" aria-label="DOOIL Solution & Engineering 홈">
+        <svg id="logoSvg" width="260" height="50" viewBox="0 0 260 50" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Red box clip -->
+            <clipPath id="clipRed">
+              <rect x="0" y="0" width="40" height="38" />
+            </clipPath>
+            <!-- Black box clip -->
+            <clipPath id="clipBlack">
+              <rect x="28" y="7" width="48" height="38" />
+            </clipPath>
+            <!-- Blue box clip -->
+            <clipPath id="clipBlue">
+              <rect x="65" y="15" width="40" height="35" />
+            </clipPath>
+          </defs>
+
+          <!-- Three overlapping colored squares -->
+          <rect x="0" y="0" width="40" height="38" fill="#C3332D" />
+          <rect x="28" y="7" width="48" height="38" fill="#111111" />
+          <rect x="65" y="15" width="40" height="35" fill="#74A7D7" />
+
+          <!-- "DOOIL" text spanning the entire icon group, centered vertically and horizontally -->
+          <!-- Total icon group: x=0 to x=105, y=0 to y=50, center x=52.5, center y=25 -->
+          <text x="52" y="33" text-anchor="middle" font-family="Arial, 'Arial Black', sans-serif" font-weight="900"
+            font-size="26" letter-spacing="2" fill="white">DOOIL</text>
+
+          <!-- Company name text to the right -->
+          <g class="logo-wordmark">
+            <text x="118" y="24" font-family="'Inter', sans-serif" font-weight="800" font-size="22"
+              letter-spacing="-0.5" fill="currentColor">DOOIL</text>
+            <text x="118" y="43" font-family="'Inter', sans-serif" font-weight="400" font-size="13" letter-spacing="0.2"
+              fill="currentColor">Solution &amp; Engineering</text>
+          </g>
+        </svg>
+      </a>
+
+      <nav class="nav-links" role="navigation">
+        <a href="#catalog">Products</a>
+        <a href="#global">Global Network</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary header-cta">Request a Quote</a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO SLIDESHOW ===== -->
+  <section class="hero" id="hero">
+    <div class="slideshow" id="slideshow">
+      <!-- 슬라이드 1: 소방 펌프 설비 (NAFFCO 스타일 산업용 소방펌프) -->
+      <div class="slide active" style="background-image:url('img_slide1.png');background-position:center center">
+      </div>
+      <!-- 슬라이드 2: 한국 기준 세계로 뻗어나가는 글로벌 네트워크 지도 -->
+      <div class="slide" style="background-image:url('img_slide2.png');background-position:center center">
+      </div>
+      <!-- 슬라이드 3: 목동 현대41타워 스타일 오피스 타워 -->
+      <div class="slide" style="background-image:url('img_slide3.png');background-position:center center">
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge reveal">Global Fire Protection Partner</div>
+      <h1 class="hero-title reveal">
+        Safety.<br>Innovation.<br><span class="accent">Global Reach.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Equipping industrial plants, petrochemical facilities and international first-responders<br>
+        with advanced fire suppression technology since 1999.
+      </p>
+      <div class="hero-ctas reveal">
+        <a href="#catalog" class="btn btn-primary btn-lg">Explore Products</a>
+        <a href="#contact" class="btn btn-ghost btn-lg">Contact Sales →</a>
+      </div>
+    </div>
+
+    <!-- Slide navigation dots -->
+    <div class="slide-nav" id="slideNav">
+      <button class="dot active" data-slide="0" aria-label="슬라이드 1"></button>
+      <button class="dot" data-slide="1" aria-label="슬라이드 2"></button>
+      <button class="dot" data-slide="2" aria-label="슬라이드 3"></button>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAND ===== -->
+  <section class="stats-band">
+    <div class="container stats-inner">
+      <div class="stat"><span class="stat-num">25+</span><span class="stat-label">Years of Expertise</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">35+</span><span class="stat-label">Countries Served</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Projects Completed</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Safety-First Commitment</span></div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT CATALOG ===== -->
+  <section id="catalog" class="section catalog-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="sec-label">Our Products</span>
+        <h2 class="sec-title">Advanced Fire Protection Catalog</h2>
+        <p class="sec-sub">Certified equipment for mission-critical industrial environments worldwide.</p>
+      </div>
+
+      <div class="product-grid">
+
+        <article class="p-card reveal">
+          <div class="p-img-wrap">
+            <img src="prod1_pump.png" alt="Fire Pumps & Skids" loading="lazy" style="object-fit:cover;" />
+            <div class="p-overlay">
+              <a href="catalog-fire-pumps.html" class="btn btn-sm btn-white">Get Specifications</a>
+            </div>
+          </div>
+          <div class="p-body">
+            <span class="p-tag">Pumping Systems</span>
+            <h3 class="p-title">Fire Pumps &amp; Skids</h3>
+            <p class="p-desc">UL/FM certified high-performance pumping solutions engineered for critical-pressure
+              delivery in extreme industrial environments.</p>
+          </div>
+        </article>
+
+        <article class="p-card reveal" style="--d:.1s">
+          <div class="p-img-wrap">
+            <img src="prod2_foam.png" alt="Foam Bladder Tank System" loading="lazy" style="object-fit:cover;background:#fff;" />
+            <div class="p-overlay">
+              <a href="catalog-foam-agents.html" class="btn btn-sm btn-white">Get Specifications</a>
+            </div>
+          </div>
+          <div class="p-body">
+            <span class="p-tag">Storage &amp; Supply</span>
+            <h3 class="p-title">Foam Agents &amp; Tanks</h3>
+            <p class="p-desc">High-capacity bladder tanks and foam concentrate storage vessels optimized for
+              petrochemical and refinery applications.</p>
+          </div>
+        </article>
+
+        <article class="p-card reveal" style="--d:.2s">
+          <div class="p-img-wrap">
+            <img src="prod3_monitor.png" alt="Monitor Nozzles & Foam Systems" loading="lazy"
+              style="object-fit:cover;" />
+            <div class="p-overlay">
+              <a href="catalog-monitor-nozzles.html" class="btn btn-sm btn-white">Get Specifications</a>
+            </div>
+          </div>
+          <div class="p-body">
+            <span class="p-tag">Suppression Systems</span>
+            <h3 class="p-title">Monitor Nozzles &amp; Foam Systems</h3>
+            <p class="p-desc">Fixed and oscillating large-capacity monitor nozzles and foam proportioning systems for
+              wide-area fire suppression.</p>
+          </div>
+        </article>
+
+        <article class="p-card reveal" style="--d:.3s">
+          <div class="p-img-wrap">
+            <img src="prod_valve.png" alt="Deluge & Control Valves" loading="lazy" style="object-fit:cover;" />
+            <div class="p-overlay">
+              <a href="catalog-control-valves.html" class="btn btn-sm btn-white">Get Specifications</a>
+            </div>
+          </div>
+          <div class="p-body">
+            <span class="p-tag">Flow Control</span>
+            <h3 class="p-title">Control &amp; Deluge Valves</h3>
+            <p class="p-desc">Precision-engineered flow control valves for reliable rapid-response operation in major
+              plant fire-main systems.</p>
+          </div>
+        </article>
+
+        <article class="p-card reveal" style="--d:.15s">
+          <div class="p-img-wrap">
+            <img src="prod_panel.png" alt="Fire Fighting Pump Control Panel" loading="lazy" style="object-fit:cover;" />
+            <div class="p-overlay">
+              <a href="catalog-control-panels.html" class="btn btn-sm btn-white">Get Specifications</a>
+            </div>
+          </div>
+          <div class="p-body">
+            <span class="p-tag">Detection &amp; Control</span>
+            <h3 class="p-title">Control Panels &amp; Gas Detectors</h3>
+            <p class="p-desc">Intelligent fire and gas detection panels with redundant control logic for safe, reliable
+              plant operations.</p>
+          </div>
+        </article>
+
+        <article class="p-card reveal" style="--d:.25s">
+          <div class="p-img-wrap">
+            <img src="prod_construction.png" alt="Fire Protection System Construction" loading="lazy" style="object-fit:cover;" />
+            <div class="p-overlay">
+              <a href="catalog-construction.html" class="btn btn-sm btn-white">Get Specifications</a>
+            </div>
+          </div>
+          <div class="p-body">
+            <span class="p-tag">Construction Services</span>
+            <h3 class="p-title">Fire Protection System Construction</h3>
+            <p class="p-desc">Professional fire protection system construction, installation, and commissioning for
+              industrial facilities and high-rise developments.</p>
+          </div>
+        </article>
+
+      </div><!-- /product-grid -->
+    </div>
+  </section>
+
+  <!-- ===== GLOBAL NETWORK ===== -->
+  <section id="global" class="section global-section">
+    <div class="container global-inner">
+
+      <div class="global-text reveal">
+        <span class="sec-label light">Our Reach</span>
+        <h2 class="sec-title light">Connecting the World<br>with Safety.</h2>
+        <p class="sec-sub light">From our Korean headquarters to complex Oil &amp; Gas facilities in the Middle East,
+          Southeast Asia, and beyond—DOOIL bridges the gap with world-class logistics and EPC support.</p>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">1999</span>
+              <h4>DOOIL Established</h4>
+              <p>Founded as a specialized fire engineering consultant in Korea.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2010</span>
+              <h4>Global EPC Expansion</h4>
+              <p>Commenced systematic equipment supply for international petrochemical plants.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2024+</span>
+              <h4>Beyond Borders</h4>
+              <p>Operating across 35+ countries with a fully-integrated supply chain, including new regional branches in
+                <strong>Vietnam</strong> and <strong>Thailand</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="global-badges">
+          <div class="gbadge">🇰🇷 Seoul, Korea (HQ)</div>
+          <div class="gbadge">🇦🇪 UAE Hub</div>
+          <div class="gbadge">🇸🇬 Singapore</div>
+          <div class="gbadge">🇻🇳 Vietnam Branch</div>
+          <div class="gbadge">🇹🇭 Thailand Branch</div>
+          <div class="gbadge">🇸🇦 Saudi Arabia</div>
+        </div>
+      </div>
+
+      <div class="global-map reveal" style="--d:.2s">
+        <div class="map-img">
+          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=900&q=80"
+            alt="Global network map" loading="lazy" />
+          <div class="map-overlay"></div>
+          <div class="ping ping-korea" title="Seoul, Korea (HQ)"></div>
+          <div class="ping ping-uae" title="UAE Logistics Hub"></div>
+          <div class="ping ping-sg" title="Singapore"></div>
+          <div class="ping ping-vn" title="Vietnam Branch"></div>
+          <div class="ping ping-th" title="Thailand Branch"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / DIVISIONS ===== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="sec-label">Our Divisions</span>
+        <h2 class="sec-title">A Total Fire Protection Solution</h2>
+      </div>
+      <div class="divisions-grid">
+        <div class="div-card reveal">
+          <div class="div-icon">🔧</div>
+          <h3>Hardware &amp; Inventory</h3>
+          <p>Comprehensive supply of certified fire protection hardware: pumps, valves, nozzles, foam equipment, and all
+            fire safety apparatus for global industrial projects.</p>
+        </div>
+        <div class="div-card reveal" style="--d:.1s">
+          <div class="div-icon">⚙️</div>
+          <h3>Engineering Solutions</h3>
+          <p>Full-scope fire protection design and engineering for oil &amp; gas plants, refineries, and petrochemical
+            facilities—from concept to commissioning.</p>
+        </div>
+        <div class="div-card reveal" style="--d:.2s">
+          <div class="div-icon">🌍</div>
+          <h3>Global EPC Support</h3>
+          <p>Dedicated support for Korean and international EPC contractors participating in overseas plant projects,
+            ensuring on-time delivery and technical assurance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section class="cta-band" id="contact">
+    <div class="container cta-inner reveal">
+      <h2>Ready to Protect Your Facility?</h2>
+      <p>Our global sales team is available to assist with specifications, pricing, and project planning.</p>
+      <div class="cta-btns">
+        <a href="mailto:sales@dooil21.com" class="btn btn-primary btn-lg">Request a Quote</a>
+        <a href="tel:0220612175" class="btn btn-outline-white btn-lg">Call Us Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <!-- Compact text logo for footer -->
+        <svg width="200" height="42" viewBox="0 0 200 42" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="32" height="30" fill="#C3332D" />
+          <rect x="22" y="6" width="38" height="30" fill="#222" />
+          <rect x="52" y="12" width="30" height="28" fill="#74A7D7" />
+          <text x="41" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20"
+            letter-spacing="1" fill="white">DOOIL</text>
+          <text x="95" y="20" font-family="'Inter',sans-serif" font-weight="700" font-size="16"
+            fill="rgba(255,255,255,0.9)">DOOIL</text>
+          <text x="95" y="36" font-family="'Inter',sans-serif" font-weight="300" font-size="11"
+            fill="rgba(255,255,255,0.5)">Solution &amp; Engineering</text>
+        </svg>
+        <p class="footer-slogan">Leading Global Provider of<br>Comprehensive Fire Safety Solutions.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="f-col">
+          <h4>Divisions</h4>
+          <ul>
+            <li><a href="#">Hardware &amp; Equipment</a></li>
+            <li><a href="#">Plant Engineering</a></li>
+            <li><a href="#">Global EPC Support</a></li>
+            <li><a href="#">Foam Systems</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">Fire Pumps</a></li>
+            <li><a href="#">Monitor Nozzles</a></li>
+            <li><a href="#">Control Valves</a></li>
+            <li><a href="#">Gas Detectors</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:0220612175​">TEL: 02) 2061-2175</a></li>
+            <li><a href="#">FAX: 0303) 0940-2238</a></li>
+            <li><a href="mailto:sales@dooil21.com">sales@dooil21.com</a></li>
+            <li><a href="mailto:jin@dooil21.com">jin@dooil21.com (개인정보)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Info Band -->
+    <div class="footer-info-band">
+      <div class="container footer-info-inner">
+        <p>
+          <strong>COMPANY</strong> (주)두일솔루션 &nbsp;|&nbsp;
+          <strong>OWNER</strong> 홍민화 &nbsp;|&nbsp;
+          <strong>BUSINESS LICENSE</strong> 117-81-53158
+        </p>
+        <p>
+          <strong>Head Office</strong> [36172] 경상북도 영주시 문수면 월호리 89-2 &nbsp;|&nbsp;
+          <strong>Branch Office</strong> [07997] 서울특별시 양천구 목동동로 293 현대41타워 2110호
+        </p>
+        <p>
+          <strong>개인정보관리책임자</strong> jin@dooil21.com
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; 2024 (주)두일솔루션. All Rights Reserved.</span>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
