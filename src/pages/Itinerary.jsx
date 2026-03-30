@@ -876,7 +876,7 @@ const Itinerary = () => {
                             </h3>
                             <div className="space-y-3">
                                 {[
-                                    { name: t('itinerary.bookSkyscanner'), icon: Plane, color: 'bg-blue-50 text-blue-600', url: `https://www.skyscanner.net/transport/flights-from/anywhere/to/${encodeURIComponent(data.destination)}` },
+                                    { name: t('itinerary.bookSkyscanner'), icon: Plane, color: 'bg-blue-50 text-blue-600', url: `https://www.skyscanner.net/` },
                                     { name: t('itinerary.bookAgoda'), icon: BedDouble, color: 'bg-emerald-50 text-emerald-600', url: `https://www.agoda.com/search?city=${encodeURIComponent(data.destination)}` },
                                     { name: t('itinerary.bookBooking'), icon: Globe, color: 'bg-indigo-50 text-indigo-600', url: `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(data.destination)}` }
                                 ].map((link, idx) => (
