@@ -194,7 +194,13 @@ const resources = {
         themeDefault: "Discovery Day",
         chatBotGreeting: "Hi! I'm your travel guide for {{destination}}. Any questions?",
         dayShort: "D{{count}}",
-        daysCount: "{{count}} days"
+        daysCount: "{{count}} days",
+        dayLabel: "Day",
+        activitiesCount: "{{count}} activities",
+        bookingShortcuts: "Book Your Trip",
+        bookAgoda: "Agoda",
+        bookSkyscanner: "Skyscanner",
+        bookBooking: "Booking.com"
       },
       login: {
         welcome: "Sign in to access your profile and view your travel history.",
@@ -409,7 +415,13 @@ const resources = {
         themeDefault: "새로운 발견의 날",
         chatBotGreeting: "안녕하세요! {{destination}} 여행 가이드입니다. 무엇이든 물어보세요!",
         dayShort: "D{{count}}",
-        daysCount: "{{count}}일"
+        daysCount: "{{count}}일",
+        dayLabel: "Day",
+        activitiesCount: "{{count}}개 활동",
+        bookingShortcuts: "여행 예약하기",
+        bookAgoda: "아고다 숙소",
+        bookSkyscanner: "스카이스캐너 항공권",
+        bookBooking: "부킹닷컴 숙소"
       },
       login: {
         welcome: "로그인하여 프로필을 관리하고 여행 기록을 확인하세요.",

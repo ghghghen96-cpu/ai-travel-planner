@@ -2,7 +2,8 @@ import React, { useEffect, useState, useMemo, useRef } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import {
     ChevronLeft, Calendar, Send, MapPin, Star, Plus, Trash2, Edit2, List,
-    Clock, MessageCircle, Sparkles, X, Plane, BedDouble, PlusCircle, ChevronDown, ChevronUp
+    Clock, MessageCircle, Sparkles, X, Plane, BedDouble, PlusCircle, ChevronDown, ChevronUp,
+    Globe, ExternalLink, ChevronRight
 } from 'lucide-react';
 import { format, addDays, differenceInDays } from 'date-fns';
 import Navbar from '../components/Navbar';
@@ -707,7 +708,7 @@ const Itinerary = () => {
             </nav>
 
             {/* MAIN */}
-            <main className="flex-1 w-full max-w-7xl mx-auto px-6 md:px-12 py-10 flex flex-col lg:flex-row gap-10">
+            <main className="flex-1 w-full max-w-[1440px] mx-auto px-6 md:px-12 py-10 flex flex-col lg:flex-row gap-10">
                 {/* LEFT SIDEBAR (ADS) */}
                 <aside className="hidden lg:flex flex-col w-72 flex-shrink-0">
                     <div className="sticky top-28 space-y-6">
@@ -727,9 +728,9 @@ const Itinerary = () => {
                                 {itinerary.map((day, di) => (
                                     <div key={day.id}>
                                         <div className="flex items-center gap-5 mb-7">
-                                            <div className="w-16 h-16 bg-secondary text-white rounded-2xl flex flex-col items-center justify-center font-black shadow-xl">
-                                                <span className="text-[9px] uppercase tracking-widest opacity-60">{t('itinerary.dayLabel')}</span>
-                                                <span className="text-3xl leading-none">{day.dayNum}</span>
+                                            <div className="w-20 h-20 bg-secondary text-white rounded-3xl flex flex-col items-center justify-center font-black shadow-2xl border-4 border-white/10 shrink-0 transform hover:scale-105 transition-transform">
+                                                <span className="text-[10px] uppercase tracking-[0.2em] opacity-50 mb-0.5">{t('itinerary.dayLabel')}</span>
+                                                <span className="text-4xl leading-none">{day.dayNum}</span>
                                             </div>
                                             <div>
                                                 <h2 className="text-3xl font-black text-secondary">{format(day.date, 'EEEE, MMM do')}</h2>
@@ -865,6 +866,52 @@ const Itinerary = () => {
                         )}
                     </AnimatePresence>
                 </div>
+
+                {/* RIGHT SIDEBAR (BOOKING SHORTCUTS) */}
+                <aside className="hidden xl:flex flex-col w-72 flex-shrink-0">
+                    <div className="sticky top-28 space-y-6">
+                        <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 backdrop-blur-xl bg-white/80">
+                            <h3 className="text-xs font-black text-gray-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                                <ExternalLink size={14} /> {t('itinerary.bookingShortcuts')}
+                            </h3>
+                            <div className="space-y-3">
+                                {[
+                                    { name: t('itinerary.bookSkyscanner'), icon: Plane, color: 'bg-blue-50 text-blue-600', url: `https://www.skyscanner.net/transport/flights-from/anywhere/to/${encodeURIComponent(data.destination)}` },
+                                    { name: t('itinerary.bookAgoda'), icon: BedDouble, color: 'bg-emerald-50 text-emerald-600', url: `https://www.agoda.com/search?city=${encodeURIComponent(data.destination)}` },
+                                    { name: t('itinerary.bookBooking'), icon: Globe, color: 'bg-indigo-50 text-indigo-600', url: `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(data.destination)}` }
+                                ].map((link, idx) => (
+                                    <a
+                                        key={idx}
+                                        href={link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-4 p-4 rounded-2xl border border-gray-50 hover:border-primary/20 hover:bg-white hover:shadow-md transition-all group"
+                                    >
+                                        <div className={`w-10 h-10 ${link.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                                            <link.icon size={20} />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <p className="text-sm font-black text-secondary truncate">{link.name}</p>
+                                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">Book now</p>
+                                        </div>
+                                        <ChevronRight size={14} className="text-gray-300 group-hover:text-primary transition-colors" />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* MINI TIP */}
+                        <div className="p-6 rounded-3xl bg-secondary text-white shadow-xl relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-150 transition-transform duration-700">
+                                <Globe size={80} />
+                            </div>
+                            <p className="text-[10px] font-black text-primary uppercase tracking-widest mb-2">Travel Tip</p>
+                            <p className="text-sm font-bold leading-relaxed relative z-10">
+                                {t('itinerary.destination')} {t('itinerary.bookingShortcuts')}를 통해 최적의 가격으로 여행을 완성하세요!
+                            </p>
+                        </div>
+                    </div>
+                </aside>
             </main>
 
             {/* FAB + CHAT */}
