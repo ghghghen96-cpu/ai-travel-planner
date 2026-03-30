@@ -907,7 +907,7 @@ const Itinerary = () => {
                             </div>
                             <p className="text-[10px] font-black text-primary uppercase tracking-widest mb-2">Travel Tip</p>
                             <p className="text-sm font-bold leading-relaxed relative z-10">
-                                {t('itinerary.destination')} {t('itinerary.bookingShortcuts')}를 통해 최적의 가격으로 여행을 완성하세요!
+                                {data.destination} {t('itinerary.bookingShortcuts')}를 통해 최적의 가격으로 여행을 완성하세요!
                             </p>
                         </div>
                     </div>
